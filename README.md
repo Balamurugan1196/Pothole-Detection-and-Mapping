@@ -27,7 +27,10 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 - **TomTom API** – Visualizes pothole locations on an interactive map  
 
 ---  
+### **System Architecture**
+![Circuit Image 1](assets/system_architecture.png)
 
+---
 ## 🔌 Connection Diagram / Table  
 ![Circuit Image 1](assets/connection_table.png)
 
@@ -60,7 +63,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 
 ## 🎥 Implementation  
  
-[![Watch the Video](assets/circuit1.png)](https://www.youtube.com/watch?v=8lgELFUhNPc)
+[![Watch the Video](assets/circuit1.jpg)](https://www.youtube.com/watch?v=8lgELFUhNPc)
 
 ---  
 
