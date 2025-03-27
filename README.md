@@ -38,7 +38,9 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 
 ## 📸 Circuit Images  
 ![Circuit Image 1](assets/circuit1.jpg)
-
+![Circuit Image 1](assets/circuit2.jpg)
+![Circuit Image 1](assets/circuit3.jpg)
+![Circuit Image 1](assets/circuit4.jpg)
 ---  
 
 ## ⚙️ Working Flow  
