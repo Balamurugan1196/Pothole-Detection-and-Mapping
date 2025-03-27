@@ -33,8 +33,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 ---  
 
 ## 🔌 Connection Diagram / Table  
-| Component        | Connection Details |
-|-----------------|------------------|
+
 
 ---  
 
