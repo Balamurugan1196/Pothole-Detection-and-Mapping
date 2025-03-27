@@ -37,12 +37,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 ## 🔌 Connection Diagram / Table  
 | Component        | Connection Details |
 |-----------------|------------------|
-| **ESP32-CAM**   | Captures and detects potholes |
-| **NodeMCU**     | Fetches GPS coordinates |
-| **GPS Module**  | Provides latitude & longitude |
-| **Flask Backend** | Stores data in MongoDB & serves API |
-| **MongoDB**     | Stores pothole location data |
-| **TomTom API**  | Visualizes potholes on a map |
+
 
 ---  
 
@@ -81,6 +76,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 ```sh
 git clone https://github.com/Balamurugan1196/Pothole-Detection-and-Mapping.git
 cd Pothole-Detection-and-Mapping
+```
 2️⃣ Install Dependencies
 Ensure you have Python installed, then run:
 
