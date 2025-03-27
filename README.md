@@ -4,7 +4,7 @@
 
 ---  
 
-## 📖 Overview  
+## 📚 Overview  
 This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge Impulse ML model** and mapping their locations using **GPS and MongoDB**.  
 
 - The **ESP32-CAM** captures images and detects potholes using a deployed ML model.  
@@ -28,9 +28,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 
 ---  
 
-## 🏗️ System Architecture  
-
-
+## 🏷️ System Architecture  
 
 ---  
 
@@ -38,11 +36,9 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 | Component        | Connection Details |
 |-----------------|------------------|
 
-
 ---  
 
 ## 📸 Circuit Images  
-
 
 ---  
 
@@ -58,16 +54,15 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 ---  
 
 ## 🌐 API Endpoints  
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/`      | `GET`  | Displays pothole locations on the map |
-| `/api/store_pothole` | `POST` | Stores pothole location in the database |
-| `/api/locations` | `GET`  | Retrieves all stored pothole locations |
+| Endpoint               | Method | Description |
+|------------------------|--------|-------------|
+| `/`                    | `GET`  | Displays pothole locations on the map |
+| `/api/store_pothole`   | `POST` | Stores pothole location in the database |
+| `/api/locations`       | `GET`  | Retrieves all stored pothole locations |
 
 ---  
 
 ## 🎥 Implementation  
-
 
 ---  
 
@@ -77,32 +72,30 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 git clone https://github.com/Balamurugan1196/Pothole-Detection-and-Mapping.git
 cd Pothole-Detection-and-Mapping
 ```
-2️⃣ Install Dependencies
-Ensure you have Python installed, then run:
 
-sh
-Copy
-Edit
+### **2️⃣ Install Dependencies**  
+Ensure you have Python installed, then run:  
+```sh
 pip install -r requirements.txt
-3️⃣ Run the Flask Backend
-sh
-Copy
-Edit
+```
+
+### **3️⃣ Run the Flask Backend**  
+```sh
 python app.py
-4️⃣ Deploy ESP32-CAM with Edge Impulse Model
-Train and deploy the Edge Impulse ML model on ESP32-CAM.
+```
 
-Ensure NodeMCU ESP8266 is properly connected to fetch GPS coordinates.
+### **4️⃣ Deploy ESP32-CAM with Edge Impulse Model**  
+- Train and deploy the Edge Impulse ML model on ESP32-CAM.  
+- Ensure NodeMCU ESP8266 is properly connected to fetch GPS coordinates.  
 
-5️⃣ Test API Endpoints
-Use Postman or curl to test /api/store_pothole and /api/locations.
+### **5️⃣ Test API Endpoints**  
+- Use **Postman** or **curl** to test `/api/store_pothole` and `/api/locations`.  
+- Open the browser to visualize potholes on the **TomTom Map**.  
 
-Open the browser to visualize potholes on the TomTom Map.
+---  
 
-🚀 Future Enhancements
-✅ Real-time Notifications – Alert authorities when a new pothole is detected
-✅ Automatic Road Condition Analysis – Improve ML model for better accuracy
-✅ Mobile App Integration – Allow users to report potholes through a mobile app
-✅ Additional Mapping APIs – Support multiple map providers for better visualization
-
-
+## 🚀 Future Enhancements  
+✅ **Real-time Notifications** – Alert authorities when a new pothole is detected  
+✅ **Automatic Road Condition Analysis** – Improve ML model for better accuracy  
+✅ **Mobile App Integration** – Allow users to report potholes through a mobile app  
+✅ **Additional Mapping APIs** – Support multiple map providers for better visualization  
