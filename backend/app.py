@@ -22,6 +22,19 @@ def index():
     locations = list(collection.find({}, {"_id": 0, "latitude": 1, "longitude": 1}))  # Fetch lat/lng only
     return render_template("map.html", locations=locations, tomtom_api_key=TOMTOM_API_KEY)
 
+@app.route("/api/store_pothole", methods=["POST"])
+def store_pothole():
+    """Store a new pothole location."""
+    data = request.get_json()
+    
+    if not data or "latitude" not in data or "longitude" not in data:
+        return jsonify({"error": "Latitude and Longitude are required"}), 400
+
+    # Insert into MongoDB
+    collection.insert_one({"latitude": data["latitude"], "longitude": data["longitude"]})
+
+    return jsonify({"message": "Pothole location stored successfully"}), 201
+
 @app.route("/api/locations")
 def get_locations():
     locations = list(collection.find({}, {"_id": 0, "latitude": 1, "longitude": 1}))
