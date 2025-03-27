@@ -1,60 +1,112 @@
-# 📌 Pothole Detection and Mapping System
-### 🚀 An IoT & AI-powered approach to real-time pothole detection and visualization
+# 📌 Pothole Detection and Mapping System  
 
----
+### 🚀 An IoT & AI-powered approach to real-time pothole detection and visualization  
 
-## 📖 Overview
-This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge Impulse ML model** and mapping their locations using **GPS and MongoDB**.
+---  
 
-- The **ESP32-CAM** captures pothole images and processes them using a deployed **ML model**.
-- A **NodeMCU ESP8266** fetches the **latitude and longitude** from a **GPS module**.
-- The ESP32-CAM sends the pothole image and GPS coordinates to a **Flask backend** via a **POST request**.
-- The backend stores the data in **MongoDB** and visualizes the pothole locations using the **TomTom API** on a web interface.
+## 📖 Overview  
+This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge Impulse ML model** and mapping their locations using **GPS and MongoDB**.  
 
----
+- The **ESP32-CAM** captures images and detects potholes using a deployed ML model.  
+- A **NodeMCU ESP8266** is connected to a GPS module to fetch the location coordinates.  
+- Once a pothole is detected, the ESP32-CAM fetches the latitude and longitude from the NodeMCU and sends the data to a **Flask backend** via a **POST request**.  
+- The backend stores pothole locations in **MongoDB** and visualizes them using the **TomTom API**.  
 
-## 🛠 Tech Stack
-- **Hardware:** ESP32-CAM, NodeMCU ESP8266, GPS Module
-- **Machine Learning:** Edge Impulse (Deployed ML Model)
-- **Backend:** Flask, MongoDB (Atlas)
-- **Frontend:** HTML, CSS, JavaScript (for map visualization)
-- **API Integration:** TomTom API (for mapping potholes)
+---  
 
----
+## 🛠 Tech Stack  
+### **Hardware Components**  
+- **ESP32-CAM** – Captures images and runs the Edge Impulse ML model  
+- **NodeMCU ESP8266** – Fetches GPS coordinates  
+- **GPS Module (NEO-6M)** – Provides latitude & longitude  
 
-## 🔗 System Architecture
-![Circuit Diagram](media/circuit_diagram.png)
+### **Software & Frameworks**  
+- **Flask (Python)** – Backend server and API development  
+- **MongoDB** – NoSQL database to store pothole locations  
+- **Edge Impulse** – Machine learning model deployment for pothole detection  
+- **TomTom API** – Visualizes pothole locations on an interactive map  
 
----
+---  
 
-## 🎯 Working Process
-1. **Pothole Detection:**
-   - The **ESP32-CAM** captures an image and processes it using an **Edge Impulse ML model** to identify potholes.
-2. **GPS Coordinates Retrieval:**
-   - The **NodeMCU ESP8266** fetches the GPS location of the pothole using a connected **GPS module**.
-3. **Data Transmission:**
-   - The ESP32-CAM sends the **image & GPS coordinates** to the Flask backend via a **POST request**.
-4. **Backend Processing:**
-   - The Flask server stores the data in **MongoDB Atlas**.
-5. **Visualization:**
-   - The TomTom API plots the pothole locations on an interactive map.
-
----
-
-## 📷 Project Implementation
+## 🏗️ System Architecture  
 
 
----
 
-## 🎥 Live Demonstration
+---  
+
+## 🔌 Connection Diagram / Table  
+| Component        | Connection Details |
+|-----------------|------------------|
+| **ESP32-CAM**   | Captures and detects potholes |
+| **NodeMCU**     | Fetches GPS coordinates |
+| **GPS Module**  | Provides latitude & longitude |
+| **Flask Backend** | Stores data in MongoDB & serves API |
+| **MongoDB**     | Stores pothole location data |
+| **TomTom API**  | Visualizes potholes on a map |
+
+---  
+
+## 📸 Circuit Images  
 
 
-📌 *Click on the image above to watch the demo video*
+---  
 
----
+## ⚙️ Working Flow  
+1. **ESP32-CAM** captures an image.  
+2. The **Edge Impulse ML model** processes the image to detect potholes.  
+3. If a pothole is detected, **ESP32-CAM** requests GPS data from **NodeMCU ESP8266**.  
+4. The **NodeMCU** fetches the location from the GPS module.  
+5. ESP32-CAM sends **pothole + location data** to the **Flask backend** via **POST request**.  
+6. The backend **stores data in MongoDB**.  
+7. The **TomTom API** retrieves stored pothole locations and marks them on a map for visualization.  
 
-## 🛠 Setup Instructions
-### 1️⃣ Clone the Repository
-```bash
+---  
+
+## 🌐 API Endpoints  
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/`      | `GET`  | Displays pothole locations on the map |
+| `/api/store_pothole` | `POST` | Stores pothole location in the database |
+| `/api/locations` | `GET`  | Retrieves all stored pothole locations |
+
+---  
+
+## 🎥 Implementation  
+
+
+---  
+
+## 🛠️ Setup Instructions  
+### **1️⃣ Clone the Repository**  
+```sh
 git clone https://github.com/Balamurugan1196/Pothole-Detection-and-Mapping.git
 cd Pothole-Detection-and-Mapping
+2️⃣ Install Dependencies
+Ensure you have Python installed, then run:
+
+sh
+Copy
+Edit
+pip install -r requirements.txt
+3️⃣ Run the Flask Backend
+sh
+Copy
+Edit
+python app.py
+4️⃣ Deploy ESP32-CAM with Edge Impulse Model
+Train and deploy the Edge Impulse ML model on ESP32-CAM.
+
+Ensure NodeMCU ESP8266 is properly connected to fetch GPS coordinates.
+
+5️⃣ Test API Endpoints
+Use Postman or curl to test /api/store_pothole and /api/locations.
+
+Open the browser to visualize potholes on the TomTom Map.
+
+🚀 Future Enhancements
+✅ Real-time Notifications – Alert authorities when a new pothole is detected
+✅ Automatic Road Condition Analysis – Improve ML model for better accuracy
+✅ Mobile App Integration – Allow users to report potholes through a mobile app
+✅ Additional Mapping APIs – Support multiple map providers for better visualization
+
+
