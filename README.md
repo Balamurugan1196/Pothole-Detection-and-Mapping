@@ -28,10 +28,6 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 
 ---  
 
-## 🏷️ System Architecture  
-
----  
-
 ## 🔌 Connection Diagram / Table  
 ![Circuit Image 1](assets/connection_table.png)
 
@@ -39,8 +35,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 
 ## 📸 Circuit Images  
 ![Circuit Image 1](assets/circuit1.jpg)
-![Circuit Image 2](assets/circuit2.jpg)
-![Circuit Image 3](assets/circuit3.jpg)
+
 ---  
 
 ## ⚙️ Working Flow  
@@ -64,7 +59,7 @@ This project focuses on detecting potholes using an **ESP32-CAM** with an **Edge
 ---  
 
 ## 🎥 Implementation  
-
+![Circuit Image 1](assets/final_demo_-_final_year.mp4)
 ---  
 
 ## 🛠️ Setup Instructions  
