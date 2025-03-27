@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
 import urllib.parse
 import certifi  # Ensures secure connection to MongoDB Atlas
